@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from '@testing-library/react-native';
-import HomeScreen from '../../src/screens/home';
+import HomeScreen from '.';
 
 describe('<HomeScreen />', () => {
   it('renders a list of notes', () => {
