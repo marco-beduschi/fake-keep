@@ -1,20 +1,20 @@
 import 'react-native-gesture-handler';
 import React from 'react';
-import {StatusBar} from 'react-native';
-import {createStackNavigator} from '@react-navigation/stack';
+import {createDrawerNavigator} from '@react-navigation/drawer';
 import {NavigationContainer} from '@react-navigation/native';
-import Home from './src/screens/home';
+import HomeScreen from './src/screens/home';
+import {CreateNoteScreen} from './src/screens/create-note';
 
-const Stack = createStackNavigator();
+const Drawer = createDrawerNavigator();
 
 const App = () => {
   return (
     <>
       <NavigationContainer>
-        <StatusBar barStyle="dark-content" />
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} />
-        </Stack.Navigator>
+        <Drawer.Navigator initialRouteName="My notes">
+          <Drawer.Screen name="My notes" component={HomeScreen} />
+          <Drawer.Screen name="Create Note" component={CreateNoteScreen} />
+        </Drawer.Navigator>
       </NavigationContainer>
     </>
   );

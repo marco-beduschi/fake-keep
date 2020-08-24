@@ -1,6 +1,7 @@
 import React from 'react';
 import Note from '../../components/note';
-import {FlatList, View} from 'react-native';
+import {FlatList} from 'react-native';
+import styled from 'styled-components/native';
 
 const NOTES = [
   {title: 'Note 1', content: 'Note Content 1'},
@@ -10,20 +11,31 @@ const NOTES = [
   {title: 'Note 5', content: 'Note Content 5'},
 ];
 
-const Home = () => {
+const Container = styled.View`
+  flex: 1;
+  padding: 10px;
+`;
+
+const Box = styled.View`
+  margin-bottom: 15px;
+`;
+
+const HomeScreen = () => {
   return (
-    <FlatList
-      data={NOTES}
-      keyExtractor={(item) => item.title}
-      renderItem={({item}) => {
-        return (
-          <View testID="note">
-            <Note title={item.title} content={item.content} />
-          </View>
-        );
-      }}
-    />
+    <Container>
+      <FlatList
+        data={NOTES}
+        keyExtractor={(item) => item.title}
+        renderItem={({item}) => {
+          return (
+            <Box testID="note">
+              <Note title={item.title} content={item.content} />
+            </Box>
+          );
+        }}
+      />
+    </Container>
   );
 };
 
-export default Home;
+export default HomeScreen;

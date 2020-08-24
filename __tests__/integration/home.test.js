@@ -1,10 +1,10 @@
 import React from 'react';
 import {render} from '@testing-library/react-native';
-import Home from '../../src/screens/home';
+import HomeScreen from '../../src/screens/home';
 
-describe('<Home />', () => {
+describe('<HomeScreen />', () => {
   it('renders a list of notes', () => {
-    const screen = render(<Home />);
+    const screen = render(<HomeScreen />);
 
     expect(screen.queryByText('Note 1')).toBeTruthy();
     expect(screen.queryByText('Note 2')).toBeTruthy();
