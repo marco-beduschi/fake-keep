@@ -9,6 +9,7 @@ const NOTES = [
   {title: 'Note 4', content: 'Note Content 4'},
   {title: 'Note 5', content: 'Note Content 5'},
 ];
+
 const Home = () => {
   return (
     <FlatList
