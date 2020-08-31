@@ -10,11 +10,11 @@ const Card = styled.View`
   padding: 15px;
 `;
 
-const Note = ({title, content}) => {
+const Note = ({title, note}) => {
   return (
     <Card>
       <H4>{title}</H4>
-      <Paragraph>{content}</Paragraph>
+      <Paragraph>{note}</Paragraph>
     </Card>
   );
 };
